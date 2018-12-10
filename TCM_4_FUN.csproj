@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85B909B1-710D-4120-BF5B-321B9B95A6E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCM_4_FUN</RootNamespace>
+    <AssemblyName>TCM_4_FUN</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alterar_Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alterar_Aluno.Designer.cs">
+      <DependentUpon>Alterar_Aluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boletim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boletim.Designer.cs">
+      <DependentUpon>Boletim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro_Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro_Aluno.Designer.cs">
+      <DependentUpon>Cadastro_Aluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro_Livro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro_Livro.Designer.cs">
+      <DependentUpon>Cadastro_Livro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro_Func.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro_Func.Designer.cs">
+      <DependentUpon>Cadastro_Func.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro_turma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro_turma.Designer.cs">
+      <DependentUpon>Cadastro_turma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Livro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Livro.Designer.cs">
+      <DependentUpon>Controle_Livro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_TCM_OutturnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_TCM_OutturnDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_TCM_OutturnDataSet1.cs">
+      <DependentUpon>DB_TCM_OutturnDataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DB_TCM_OutturnDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_TCM_OutturnDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_TCM_OutturnDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_TCM_OutturnDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Excluir_Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Excluir_Aluno.Designer.cs">
+      <DependentUpon>Excluir_Aluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutturnModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutturnModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OutturnModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OutturnModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutturnModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TB_ALUGUEL.cs">
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_ALUNO.cs">
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_BOLETIM.cs">
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_FUNCIONARIO.cs">
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_LIVRO.cs">
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_LOGAR.cs">
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_TURMA.cs">
+      <DependentUpon>OutturnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_Principal.Designer.cs">
+      <DependentUpon>Tela_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes.Designer.cs">
+      <DependentUpon>Testes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test_Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test_Image.Designer.cs">
+      <DependentUpon>Test_Image.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alterar_Aluno.resx">
+      <DependentUpon>Alterar_Aluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boletim.resx">
+      <DependentUpon>Boletim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro_Aluno.resx">
+      <DependentUpon>Cadastro_Aluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro_Livro.resx">
+      <DependentUpon>Cadastro_Livro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro_Func.resx">
+      <DependentUpon>Cadastro_Func.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro_turma.resx">
+      <DependentUpon>Cadastro_turma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Livro.resx">
+      <DependentUpon>Controle_Livro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excluir_Aluno.resx">
+      <DependentUpon>Excluir_Aluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tela_Principal.resx">
+      <DependentUpon>Tela_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes.resx">
+      <DependentUpon>Testes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test_Image.resx">
+      <DependentUpon>Test_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="DB_TCM_OutturnDataSet.xsc">
+      <DependentUpon>DB_TCM_OutturnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_TCM_OutturnDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet.xss">
+      <DependentUpon>DB_TCM_OutturnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet1.xsc">
+      <DependentUpon>DB_TCM_OutturnDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_TCM_OutturnDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet1.xss">
+      <DependentUpon>DB_TCM_OutturnDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet21.xsc">
+      <DependentUpon>DB_TCM_OutturnDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_TCM_OutturnDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_TCM_OutturnDataSet21.xss">
+      <DependentUpon>DB_TCM_OutturnDataSet21.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="OutturnModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OutturnModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="OutturnModel.edmx.diagram">
+      <DependentUpon>OutturnModel.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outturn final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cad livro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONTROLE LIVEO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon cadastro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon turma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAD ALUNO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAD FUNC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\181501-interface - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\181501-interface %281%29 - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\181501-interface %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\181501-interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddsfs - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddsfs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fgfd - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fgfd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fvgfdg - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fvgfdg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gfhf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghhdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hjgj - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hjgj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundpadrao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OutturnModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OutturnModel.edmx</DependentUpon>
+      <LastGenOutput>OutturnModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="OutturnModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OutturnModel.edmx</DependentUpon>
+      <LastGenOutput>OutturnModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

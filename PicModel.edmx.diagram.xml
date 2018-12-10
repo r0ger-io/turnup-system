@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad6cdd03b2324b46a14ad7ddb435bc9e" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ALUGUEL" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ALUNO" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_CAIXA" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_COMPRA" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_CURSO" Width="1.5" PointX="3.75" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_DOCUMENTO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ENDERECO" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_FUNCIONARIO" Width="1.5" PointX="1.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_IMAGEM" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_LIVRO" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_LOGAR" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_MENCAO" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_MENSALIDADE" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_PROFESSOR" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_PROVA" Width="1.5" PointX="3.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_RESPONSAVEL" Width="1.5" PointX="3" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_SALA" Width="1.5" PointX="3.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_SALA_DE_VIDEO" Width="1.5" PointX="8" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_TELEFONE" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_TURMA" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ALUGUE__COD_A__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_COMPRA__COD_A__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_A__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENSAL__COD_A__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_CAIXA__COD_FU__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENSAL__DATA___403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TURMA__COD_CU__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_SALA_D__COD_F__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_P__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_P__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_SALA_D__COD_P__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TURMA__COD_PR__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TURMA__COD_SA__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_SALA_D__COD_T__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.TB_ALUGUEL_LIVRO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.TB_COMPRA_LIVRO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.TB_RESPONSAVEL_ALUNO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

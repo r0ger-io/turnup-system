@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38919a5f5f1b4cd18534e3374d304908" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="PicureModel.TB_ALUGUEL" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_ALUNO" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_CAIXA" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_COMPRA" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_CURSO" Width="1.5" PointX="3.75" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_DOCUMENTO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_ENDERECO" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_FUNCIONARIO" Width="1.5" PointX="1.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_LIVRO" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_LOGAR" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_MENCAO" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_MENSALIDADE" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_PROFESSOR" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_PROVA" Width="1.5" PointX="3.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_RESPONSAVEL" Width="1.5" PointX="3" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_SALA" Width="1.5" PointX="3.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_SALA_DE_VIDEO" Width="1.5" PointX="8" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_TELEFONE" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PicureModel.TB_TURMA" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="PicureModel.FK__TB_ALUGUE__COD_A__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_COMPRA__COD_A__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_MENCAO__COD_A__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_MENSAL__COD_A__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_CAIXA__COD_FU__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_MENSAL__DATA___412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_TURMA__COD_CU__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_SALA_D__COD_F__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_MENCAO__COD_P__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_MENCAO__COD_P__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_SALA_D__COD_P__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_TURMA__COD_PR__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_TURMA__COD_SA__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.FK__TB_SALA_D__COD_T__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.TB_ALUGUEL_LIVRO" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.TB_COMPRA_LIVRO" ManuallyRouted="false" />
+        <AssociationConnector Association="PicureModel.TB_RESPONSAVEL_ALUNO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

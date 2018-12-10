@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OutturnModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_ALUGUEL">
+    <Key>
+      <PropertyRef Name="COD_ALUGUEL" />
+    </Key>
+    <Property Name="COD_ALUGUEL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_ALUNO" Type="int" />
+    <Property Name="DATA_ALUGUEL" Type="date" />
+    <Property Name="DATA_DEVOLUCAO" Type="date" />
+  </EntityType>
+  <EntityType Name="TB_ALUGUEL_LIVRO">
+    <Key>
+      <PropertyRef Name="COD_LIVRO" />
+      <PropertyRef Name="COD_ALUGUEL" />
+    </Key>
+    <Property Name="COD_LIVRO" Type="int" Nullable="false" />
+    <Property Name="COD_ALUGUEL" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ALUNO">
+    <Key>
+      <PropertyRef Name="COD_ALUNO" />
+    </Key>
+    <Property Name="COD_ALUNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_ALUNO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="NASC_ALUNO" Type="date" Nullable="false" />
+    <Property Name="EMAIL_ALUNO" Type="varchar" MaxLength="60" />
+    <Property Name="STATUS_ALUNO" Type="bit" />
+    <Property Name="SEXO_ALUNO" Type="bit" />
+    <Property Name="PLANO_SAUDE" Type="bit" />
+    <Property Name="OBSERVACOES_MEDICA" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TB_CAIXA">
+    <Key>
+      <PropertyRef Name="DATA_CAIXA" />
+    </Key>
+    <Property Name="COD_FUNC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VALOR_DIA" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DATA_CAIXA" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_COMPRA">
+    <Key>
+      <PropertyRef Name="COD_COMPRA" />
+    </Key>
+    <Property Name="COD_COMPRA" Type="int" Nullable="false" />
+    <Property Name="COD_ALUNO" Type="int" />
+    <Property Name="VALOR_COMPRA" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DATA_COMPRA" Type="date" />
+  </EntityType>
+  <EntityType Name="TB_COMPRA_LIVRO">
+    <Key>
+      <PropertyRef Name="COD_LIVRO" />
+      <PropertyRef Name="COD_COMPRA" />
+    </Key>
+    <Property Name="COD_LIVRO" Type="int" Nullable="false" />
+    <Property Name="COD_COMPRA" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_CURSO">
+    <Key>
+      <PropertyRef Name="COD_CURSO" />
+    </Key>
+    <Property Name="COD_CURSO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ESTAGIO_CURSO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NOME_CURSO" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_DOCUMENTO">
+    <Key>
+      <PropertyRef Name="COD_DOCUMENTO" />
+    </Key>
+    <Property Name="COD_DOCUMENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RG" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="CPF" Type="numeric" Precision="11" Scale="0" />
+  </EntityType>
+  <EntityType Name="TB_ENDERECO">
+    <Key>
+      <PropertyRef Name="COD_ENDERECO" />
+    </Key>
+    <Property Name="COD_ENDERECO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LOGRADOURO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NUMERO_LOGRA" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="COMPLEMENTO" Type="varchar" MaxLength="20" />
+    <Property Name="CEP" Type="numeric" Precision="8" Scale="0" />
+    <Property Name="UF" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="TB_FUNCIONARIO">
+    <Key>
+      <PropertyRef Name="COD_FUNC" />
+    </Key>
+    <Property Name="COD_FUNC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_FUNC" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ORGAO_EMISSOR_FUNC" Type="varchar" MaxLength="15" />
+    <Property Name="UF" Type="char" MaxLength="2" />
+    <Property Name="FUNCAO_FUNC" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NASC_FUNC" Type="date" Nullable="false" />
+    <Property Name="SALARIO_FUNC" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="VALE_TRANSPORTE_FUNC" Type="bit" />
+    <Property Name="VALE_ALIMENACAO_FUNC" Type="bit" />
+    <Property Name="NUM_CARTEIRA_TRABALHO" Type="numeric" Precision="11" Scale="0" />
+  </EntityType>
+  <EntityType Name="TB_IMAGEM">
+    <Key>
+      <PropertyRef Name="COD_IMG" />
+    </Key>
+    <Property Name="COD_IMG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_IMG" Type="varchar" MaxLength="255" />
+    <Property Name="IMG" Type="image" />
+  </EntityType>
+  <EntityType Name="TB_LIVRO">
+    <Key>
+      <PropertyRef Name="COD_LIVRO" />
+    </Key>
+    <Property Name="COD_LIVRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PRECO_LIVRO" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="NOME_LIVRO" Type="varchar" MaxLength="35" />
+    <Property Name="AUTOR_LIVRO" Type="varchar" MaxLength="60" />
+    <Property Name="EDITORA_LIVRO" Type="varchar" MaxLength="50" />
+    <Property Name="ASSUNTO_LIVRO" Type="varchar" MaxLength="40" />
+    <Property Name="IDIOMA_LIVRO" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TB_LOGAR">
+    <Key>
+      <PropertyRef Name="COD_FUNC" />
+    </Key>
+    <Property Name="COD_FUNC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SENHA" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_MENCAO">
+    <Key>
+      <PropertyRef Name="COD_MENCAO" />
+    </Key>
+    <Property Name="COD_MENCAO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_FUNC" Type="int" />
+    <Property Name="COD_ALUNO" Type="int" />
+    <Property Name="COD_PROVA" Type="int" />
+  </EntityType>
+  <EntityType Name="TB_MENSALIDADE">
+    <Key>
+      <PropertyRef Name="COD_MENSALIDADE" />
+      <PropertyRef Name="COD_ALUNO" />
+    </Key>
+    <Property Name="COD_MENSALIDADE" Type="int" Nullable="false" />
+    <Property Name="COD_ALUNO" Type="int" Nullable="false" />
+    <Property Name="STATUS_MENSALIDADE" Type="bit" />
+    <Property Name="DATA_MENSALIDADE" Type="date" />
+    <Property Name="VALOR_MENSALIDADE" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DATA_CAIXA" Type="date" />
+  </EntityType>
+  <EntityType Name="TB_PROVA">
+    <Key>
+      <PropertyRef Name="COD_PROVA" />
+    </Key>
+    <Property Name="COD_PROVA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOTA_PROVA" Type="decimal" Precision="4" Scale="2" />
+  </EntityType>
+  <EntityType Name="TB_RESPONSAVEL">
+    <Key>
+      <PropertyRef Name="COD_RESP" />
+    </Key>
+    <Property Name="COD_RESP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_RESP" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="CPF_RESP" Type="numeric" Precision="11" Scale="0" Nullable="false" />
+    <Property Name="RG_RESP" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="TEL_RESP" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMAIL_RESP" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="TB_RESPONSAVEL_ALUNO">
+    <Key>
+      <PropertyRef Name="COD_ALUNO" />
+      <PropertyRef Name="COD_RESP" />
+    </Key>
+    <Property Name="COD_ALUNO" Type="int" Nullable="false" />
+    <Property Name="COD_RESP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_SALA">
+    <Key>
+      <PropertyRef Name="COD_SALA" />
+    </Key>
+    <Property Name="COD_SALA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CAPAC_SALA" Type="numeric" Precision="3" Scale="0" />
+  </EntityType>
+  <EntityType Name="TB_SALA_DE_VIDEO">
+    <Key>
+      <PropertyRef Name="COD_SALA_VIDEO" />
+    </Key>
+    <Property Name="COD_SALA_VIDEO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_FUNC" Type="int" />
+    <Property Name="COD_TURMA" Type="int" />
+    <Property Name="HORA_VIDEO" Type="time" Precision="7" />
+    <Property Name="DIA_VIDEO" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TB_SALARIO">
+    <Key>
+      <PropertyRef Name="COD_SALARIO" />
+    </Key>
+    <Property Name="COD_SALARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPO_SALRIO" Type="varchar" MaxLength="15" />
+    <Property Name="SALARIO" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="NUM_PIS" Type="numeric" Precision="11" Scale="0" />
+  </EntityType>
+  <EntityType Name="TB_TELEFONE">
+    <Key>
+      <PropertyRef Name="COD_TELEFONE" />
+    </Key>
+    <Property Name="COD_TELEFONE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TELEFONE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CELULAR" Type="numeric" Precision="11" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_TURMA">
+    <Key>
+      <PropertyRef Name="COD_TURMA" />
+    </Key>
+    <Property Name="COD_TURMA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_SALA" Type="int" />
+    <Property Name="COD_CURSO" Type="int" />
+    <Property Name="COD_FUNC" Type="int" />
+    <Property Name="NOME_TURMA" Type="varchar" MaxLength="20" />
+    <Property Name="HORA_TURMA" Type="time" Precision="7" />
+    <Property Name="DIA_TURMA" Type="int" />
+    <Property Name="DATA_INI" Type="date" />
+    <Property Name="DATA_FIN" Type="date" />
+  </EntityType>
+  <Association Name="FK__TB_ALUGUE__COD_A__286302EC">
+    <End Role="TB_ALUNO" Type="Self.TB_ALUNO" Multiplicity="0..1" />
+    <End Role="TB_ALUGUEL" Type="Self.TB_ALUGUEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ALUNO">
+        <PropertyRef Name="COD_ALUNO" />
+      </Principal>
+      <Dependent Role="TB_ALUGUEL">
+        <PropertyRef Name="COD_ALUNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_ALUGUE__COD_A__2E1BDC42">
+    <End Role="TB_ALUGUEL" Type="Self.TB_ALUGUEL" Multiplicity="1" />
+    <End Role="TB_ALUGUEL_LIVRO" Type="Self.TB_ALUGUEL_LIVRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ALUGUEL">
+        <PropertyRef Name="COD_ALUGUEL" />
+      </Principal>
+      <Dependent Role="TB_ALUGUEL_LIVRO">
+        <PropertyRef Name="COD_ALUGUEL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_ALUGUE__COD_L__2D27B809">
+    <End Role="TB_LIVRO" Type="Self.TB_LIVRO" Multiplicity="1" />
+    <End Role="TB_ALUGUEL_LIVRO" Type="Self.TB_ALUGUEL_LIVRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_LIVRO">
+        <PropertyRef Name="COD_LIVRO" />
+      </Principal>
+      <Dependent Role="TB_ALUGUEL_LIVRO">
+        <PropertyRef Name="COD_LIVRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_CAIXA__COD_FU__37A5467C">
+    <End Role="TB_FUNCIONARIO" Type="Self.TB_FUNCIONARIO" Multiplicity="1" />
+    <End Role="TB_CAIXA" Type="Self.TB_CAIXA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_FUNCIONARIO">
+        <PropertyRef Name="COD_FUNC" />
+      </Principal>
+      <Dependent Role="TB_CAIXA">
+        <PropertyRef Name="COD_FUNC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_COMPRA__COD_A__3E52440B">
+    <End Role="TB_ALUNO" Type="Self.TB_ALUNO" Multiplicity="0..1" />
+    <End Role="TB_COMPRA" Type="Self.TB_COMPRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ALUNO">
+        <PropertyRef Name="COD_ALUNO" />
+      </Principal>
+      <Dependent Role="TB_COMPRA">
+        <PropertyRef Name="COD_ALUNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_COMPRA__COD_C__4222D4EF">
+    <End Role="TB_COMPRA" Type="Self.TB_COMPRA" Multiplicity="1" />
+    <End Role="TB_COMPRA_LIVRO" Type="Self.TB_COMPRA_LIVRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_COMPRA">
+        <PropertyRef Name="COD_COMPRA" />
+      </Principal>
+      <Dependent Role="TB_COMPRA_LIVRO">
+        <PropertyRef Name="COD_COMPRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_COMPRA__COD_L__412EB0B6">
+    <End Role="TB_LIVRO" Type="Self.TB_LIVRO" Multiplicity="1" />
+    <End Role="TB_COMPRA_LIVRO" Type="Self.TB_COMPRA_LIVRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_LIVRO">
+        <PropertyRef Name="COD_LIVRO" />
+      </Principal>
+      <Dependent Role="TB_COMPRA_LIVRO">
+        <PropertyRef Name="COD_LIVRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_LOGAR__SENHA__44FF419A">
+    <End Role="TB_FUNCIONARIO" Type="Self.TB_FUNCIONARIO" Multiplicity="1" />
+    <End Role="TB_LOGAR" Type="Self.TB_LOGAR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TB_FUNCIONARIO">
+        <PropertyRef Name="COD_FUNC" />
+      </Principal>
+      <Dependent Role="TB_LOGAR">
+        <PropertyRef Name="COD_FUNC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_MENCAO__COD_A__33D4B598">
+    <End Role="TB_ALUNO" Type="Self.TB_ALUNO" Multiplicity="0..1" />
+    <End Role="TB_MENCAO" Type="Self.TB_MENCAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ALUNO">
+        <PropertyRef Name="COD_ALUNO" />
+      </Principal>
+      <Dependent Role="TB_MENCAO">
+        <PropertyRef Name="COD_ALUNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_MENCAO__COD_F__32E0915F">
+    <End Role="TB_FUNCIONARIO" Type="Self.TB_FUNCIONARIO" Multiplicity="0..1" />
+    <End Role="TB_MENCAO" Type="Self.TB_MENCAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_FUNCIONARIO">
+        <PropertyRef Name="COD_FUNC" />
+      </Principal>
+      <Dependent Role="TB_MENCAO">
+        <PropertyRef Name="COD_FUNC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_MENCAO__COD_P__34C8D9D1">
+    <End Role="TB_PROVA" Type="Self.TB_PROVA" Multiplicity="0..1" />
+    <End Role="TB_MENCAO" Type="Self.TB_MENCAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PROVA">
+        <PropertyRef Name="COD_PROVA" />
+      </Principal>
+      <Dependent Role="TB_MENCAO">
+        <PropertyRef Name="COD_PROVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_MENSAL__COD_A__3A81B327">
+    <End Role="TB_ALUNO" Type="Self.TB_ALUNO" Multiplicity="1" />
+    <End Role="TB_MENSALIDADE" Type="Self.TB_MENSALIDADE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ALUNO">
+        <PropertyRef Name="COD_ALUNO" />
+      </Principal>
+      <Dependent Role="TB_MENSALIDADE">
+        <PropertyRef Name="COD_ALUNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_MENSAL__DATA___3B75D760">
+    <End Role="TB_CAIXA" Type="Self.TB_CAIXA" Multiplicity="0..1" />
+    <End Role="TB_MENSALIDADE" Type="Self.TB_MENSALIDADE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CAIXA">
+        <PropertyRef Name="DATA_CAIXA" />
+      </Principal>
+      <Dependent Role="TB_MENSALIDADE">
+        <PropertyRef Name="DATA_CAIXA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_RESPON__COD_A__20C1E124">
+    <End Role="TB_ALUNO" Type="Self.TB_ALUNO" Multiplicity="1" />
+    <End Role="TB_RESPONSAVEL_ALUNO" Type="Self.TB_RESPONSAVEL_ALUNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ALUNO">
+        <PropertyRef Name="COD_ALUNO" />
+      </Principal>
+      <Dependent Role="TB_RESPONSAVEL_ALUNO">
+        <PropertyRef Name="COD_ALUNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_RESPON__COD_R__21B6055D">
+    <End Role="TB_RESPONSAVEL" Type="Self.TB_RESPONSAVEL" Multiplicity="1" />
+    <End Role="TB_RESPONSAVEL_ALUNO" Type="Self.TB_RESPONSAVEL_ALUNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_RESPONSAVEL">
+        <PropertyRef Name="COD_RESP" />
+      </Principal>
+      <Dependent Role="TB_RESPONSAVEL_ALUNO">
+        <PropertyRef Name="COD_RESP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_SALA_D__COD_F__24927208">
+    <End Role="TB_FUNCIONARIO" Type="Self.TB_FUNCIONARIO" Multiplicity="0..1" />
+    <End Role="TB_SALA_DE_VIDEO" Type="Self.TB_SALA_DE_VIDEO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_FUNCIONARIO">
+        <PropertyRef Name="COD_FUNC" />
+      </Principal>
+      <Dependent Role="TB_SALA_DE_VIDEO">
+        <PropertyRef Name="COD_FUNC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_SALA_D__COD_T__25869641">
+    <End Role="TB_TURMA" Type="Self.TB_TURMA" Multiplicity="0..1" />
+    <End Role="TB_SALA_DE_VIDEO" Type="Self.TB_SALA_DE_VIDEO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TURMA">
+        <PropertyRef Name="COD_TURMA" />
+      </Principal>
+      <Dependent Role="TB_SALA_DE_VIDEO">
+        <PropertyRef Name="COD_TURMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_TURMA__COD_CU__1920BF5C">
+    <End Role="TB_CURSO" Type="Self.TB_CURSO" Multiplicity="0..1" />
+    <End Role="TB_TURMA" Type="Self.TB_TURMA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CURSO">
+        <PropertyRef Name="COD_CURSO" />
+      </Principal>
+      <Dependent Role="TB_TURMA">
+        <PropertyRef Name="COD_CURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_TURMA__COD_FU__1A14E395">
+    <End Role="TB_FUNCIONARIO" Type="Self.TB_FUNCIONARIO" Multiplicity="0..1" />
+    <End Role="TB_TURMA" Type="Self.TB_TURMA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_FUNCIONARIO">
+        <PropertyRef Name="COD_FUNC" />
+      </Principal>
+      <Dependent Role="TB_TURMA">
+        <PropertyRef Name="COD_FUNC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TB_TURMA__COD_SA__182C9B23">
+    <End Role="TB_SALA" Type="Self.TB_SALA" Multiplicity="0..1" />
+    <End Role="TB_TURMA" Type="Self.TB_TURMA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_SALA">
+        <PropertyRef Name="COD_SALA" />
+      </Principal>
+      <Dependent Role="TB_TURMA">
+        <PropertyRef Name="COD_SALA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OutturnModelStoreContainer">
+    <EntitySet Name="TB_ALUGUEL" EntityType="Self.TB_ALUGUEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ALUGUEL_LIVRO" EntityType="Self.TB_ALUGUEL_LIVRO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ALUNO" EntityType="Self.TB_ALUNO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CAIXA" EntityType="Self.TB_CAIXA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_COMPRA" EntityType="Self.TB_COMPRA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_COMPRA_LIVRO" EntityType="Self.TB_COMPRA_LIVRO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CURSO" EntityType="Self.TB_CURSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_DOCUMENTO" EntityType="Self.TB_DOCUMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ENDERECO" EntityType="Self.TB_ENDERECO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_FUNCIONARIO" EntityType="Self.TB_FUNCIONARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_IMAGEM" EntityType="Self.TB_IMAGEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_LIVRO" EntityType="Self.TB_LIVRO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_LOGAR" EntityType="Self.TB_LOGAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_MENCAO" EntityType="Self.TB_MENCAO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_MENSALIDADE" EntityType="Self.TB_MENSALIDADE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PROVA" EntityType="Self.TB_PROVA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_RESPONSAVEL" EntityType="Self.TB_RESPONSAVEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_RESPONSAVEL_ALUNO" EntityType="Self.TB_RESPONSAVEL_ALUNO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SALA" EntityType="Self.TB_SALA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SALA_DE_VIDEO" EntityType="Self.TB_SALA_DE_VIDEO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SALARIO" EntityType="Self.TB_SALARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TELEFONE" EntityType="Self.TB_TELEFONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TURMA" EntityType="Self.TB_TURMA" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TB_ALUGUE__COD_A__286302EC" Association="Self.FK__TB_ALUGUE__COD_A__286302EC">
+      <End Role="TB_ALUNO" EntitySet="TB_ALUNO" />
+      <End Role="TB_ALUGUEL" EntitySet="TB_ALUGUEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_ALUGUE__COD_A__2E1BDC42" Association="Self.FK__TB_ALUGUE__COD_A__2E1BDC42">
+      <End Role="TB_ALUGUEL" EntitySet="TB_ALUGUEL" />
+      <End Role="TB_ALUGUEL_LIVRO" EntitySet="TB_ALUGUEL_LIVRO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_ALUGUE__COD_L__2D27B809" Association="Self.FK__TB_ALUGUE__COD_L__2D27B809">
+      <End Role="TB_LIVRO" EntitySet="TB_LIVRO" />
+      <End Role="TB_ALUGUEL_LIVRO" EntitySet="TB_ALUGUEL_LIVRO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_CAIXA__COD_FU__37A5467C" Association="Self.FK__TB_CAIXA__COD_FU__37A5467C">
+      <End Role="TB_FUNCIONARIO" EntitySet="TB_FUNCIONARIO" />
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_COMPRA__COD_A__3E52440B" Association="Self.FK__TB_COMPRA__COD_A__3E52440B">
+      <End Role="TB_ALUNO" EntitySet="TB_ALUNO" />
+      <End Role="TB_COMPRA" EntitySet="TB_COMPRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_COMPRA__COD_C__4222D4EF" Association="Self.FK__TB_COMPRA__COD_C__4222D4EF">
+      <End Role="TB_COMPRA" EntitySet="TB_COMPRA" />
+      <End Role="TB_COMPRA_LIVRO" EntitySet="TB_COMPRA_LIVRO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_COMPRA__COD_L__412EB0B6" Association="Self.FK__TB_COMPRA__COD_L__412EB0B6">
+      <End Role="TB_LIVRO" EntitySet="TB_LIVRO" />
+      <End Role="TB_COMPRA_LIVRO" EntitySet="TB_COMPRA_LIVRO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_LOGAR__SENHA__44FF419A" Association="Self.FK__TB_LOGAR__SENHA__44FF419A">
+      <End Role="TB_FUNCIONARIO" EntitySet="TB_FUNCIONARIO" />
+      <End Role="TB_LOGAR" EntitySet="TB_LOGAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_MENCAO__COD_A__33D4B598" Association="Self.FK__TB_MENCAO__COD_A__33D4B598">
+      <End Role="TB_ALUNO" EntitySet="TB_ALUNO" />
+      <End Role="TB_MENCAO" EntitySet="TB_MENCAO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_MENCAO__COD_F__32E0915F" Association="Self.FK__TB_MENCAO__COD_F__32E0915F">
+      <End Role="TB_FUNCIONARIO" EntitySet="TB_FUNCIONARIO" />
+      <End Role="TB_MENCAO" EntitySet="TB_MENCAO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_MENCAO__COD_P__34C8D9D1" Association="Self.FK__TB_MENCAO__COD_P__34C8D9D1">
+      <End Role="TB_PROVA" EntitySet="TB_PROVA" />
+      <End Role="TB_MENCAO" EntitySet="TB_MENCAO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_MENSAL__COD_A__3A81B327" Association="Self.FK__TB_MENSAL__COD_A__3A81B327">
+      <End Role="TB_ALUNO" EntitySet="TB_ALUNO" />
+      <End Role="TB_MENSALIDADE" EntitySet="TB_MENSALIDADE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_MENSAL__DATA___3B75D760" Association="Self.FK__TB_MENSAL__DATA___3B75D760">
+      <End Role="TB_CAIXA" EntitySet="TB_CAIXA" />
+      <End Role="TB_MENSALIDADE" EntitySet="TB_MENSALIDADE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_RESPON__COD_A__20C1E124" Association="Self.FK__TB_RESPON__COD_A__20C1E124">
+      <End Role="TB_ALUNO" EntitySet="TB_ALUNO" />
+      <End Role="TB_RESPONSAVEL_ALUNO" EntitySet="TB_RESPONSAVEL_ALUNO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_RESPON__COD_R__21B6055D" Association="Self.FK__TB_RESPON__COD_R__21B6055D">
+      <End Role="TB_RESPONSAVEL" EntitySet="TB_RESPONSAVEL" />
+      <End Role="TB_RESPONSAVEL_ALUNO" EntitySet="TB_RESPONSAVEL_ALUNO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_SALA_D__COD_F__24927208" Association="Self.FK__TB_SALA_D__COD_F__24927208">
+      <End Role="TB_FUNCIONARIO" EntitySet="TB_FUNCIONARIO" />
+      <End Role="TB_SALA_DE_VIDEO" EntitySet="TB_SALA_DE_VIDEO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_SALA_D__COD_T__25869641" Association="Self.FK__TB_SALA_D__COD_T__25869641">
+      <End Role="TB_TURMA" EntitySet="TB_TURMA" />
+      <End Role="TB_SALA_DE_VIDEO" EntitySet="TB_SALA_DE_VIDEO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_TURMA__COD_CU__1920BF5C" Association="Self.FK__TB_TURMA__COD_CU__1920BF5C">
+      <End Role="TB_CURSO" EntitySet="TB_CURSO" />
+      <End Role="TB_TURMA" EntitySet="TB_TURMA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_TURMA__COD_FU__1A14E395" Association="Self.FK__TB_TURMA__COD_FU__1A14E395">
+      <End Role="TB_FUNCIONARIO" EntitySet="TB_FUNCIONARIO" />
+      <End Role="TB_TURMA" EntitySet="TB_TURMA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TB_TURMA__COD_SA__182C9B23" Association="Self.FK__TB_TURMA__COD_SA__182C9B23">
+      <End Role="TB_SALA" EntitySet="TB_SALA" />
+      <End Role="TB_TURMA" EntitySet="TB_TURMA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

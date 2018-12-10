@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b85d55b13d754f16a6fceea5fc4dfce0" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ALUGUEL" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ALUNO" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_BOLETIM" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_FUNCIONARIO" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_LIVRO" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_LOGAR" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_TURMA" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ALUGUE__COD_A__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_BOLETI__COD_A__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_BOLETI__COD_F__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_LOGAR__SENHA__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TURMA__COD_FU__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.TB_ALUGUEL_LIVRO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.TB_ALUNO_TURMA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

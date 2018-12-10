@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OutturnModelStoreContainer" CdmEntityContainer="PicEntities">
+    <EntitySetMapping Name="TB_ALUGUEL">
+      <EntityTypeMapping TypeName="OutturnModel.TB_ALUGUEL">
+        <MappingFragment StoreEntitySet="TB_ALUGUEL">
+          <ScalarProperty Name="COD_ALUGUEL" ColumnName="COD_ALUGUEL" />
+          <ScalarProperty Name="COD_ALUNO" ColumnName="COD_ALUNO" />
+          <ScalarProperty Name="DATA_ALUGUEL" ColumnName="DATA_ALUGUEL" />
+          <ScalarProperty Name="DATA_DEVOLUCAO" ColumnName="DATA_DEVOLUCAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ALUNO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_ALUNO">
+        <MappingFragment StoreEntitySet="TB_ALUNO">
+          <ScalarProperty Name="OBSERVACOES_MEDICA" ColumnName="OBSERVACOES_MEDICA" />
+          <ScalarProperty Name="PLANO_SAUDE" ColumnName="PLANO_SAUDE" />
+          <ScalarProperty Name="COD_ALUNO" ColumnName="COD_ALUNO" />
+          <ScalarProperty Name="NOME_ALUNO" ColumnName="NOME_ALUNO" />
+          <ScalarProperty Name="NASC_ALUNO" ColumnName="NASC_ALUNO" />
+          <ScalarProperty Name="EMAIL_ALUNO" ColumnName="EMAIL_ALUNO" />
+          <ScalarProperty Name="STATUS_ALUNO" ColumnName="STATUS_ALUNO" />
+          <ScalarProperty Name="SEXO_ALUNO" ColumnName="SEXO_ALUNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CAIXA">
+      <EntityTypeMapping TypeName="OutturnModel.TB_CAIXA">
+        <MappingFragment StoreEntitySet="TB_CAIXA">
+          <ScalarProperty Name="COD_FUNC" ColumnName="COD_FUNC" />
+          <ScalarProperty Name="VALOR_DIA" ColumnName="VALOR_DIA" />
+          <ScalarProperty Name="DATA_CAIXA" ColumnName="DATA_CAIXA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_COMPRA">
+      <EntityTypeMapping TypeName="OutturnModel.TB_COMPRA">
+        <MappingFragment StoreEntitySet="TB_COMPRA">
+          <ScalarProperty Name="COD_COMPRA" ColumnName="COD_COMPRA" />
+          <ScalarProperty Name="COD_ALUNO" ColumnName="COD_ALUNO" />
+          <ScalarProperty Name="VALOR_COMPRA" ColumnName="VALOR_COMPRA" />
+          <ScalarProperty Name="DATA_COMPRA" ColumnName="DATA_COMPRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CURSO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_CURSO">
+        <MappingFragment StoreEntitySet="TB_CURSO">
+          <ScalarProperty Name="COD_CURSO" ColumnName="COD_CURSO" />
+          <ScalarProperty Name="ESTAGIO_CURSO" ColumnName="ESTAGIO_CURSO" />
+          <ScalarProperty Name="NOME_CURSO" ColumnName="NOME_CURSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_DOCUMENTO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_DOCUMENTO">
+        <MappingFragment StoreEntitySet="TB_DOCUMENTO">
+          <ScalarProperty Name="COD_DOCUMENTO" ColumnName="COD_DOCUMENTO" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ENDERECO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_ENDERECO">
+        <MappingFragment StoreEntitySet="TB_ENDERECO">
+          <ScalarProperty Name="COD_ENDERECO" ColumnName="COD_ENDERECO" />
+          <ScalarProperty Name="LOGRADOURO" ColumnName="LOGRADOURO" />
+          <ScalarProperty Name="NUMERO_LOGRA" ColumnName="NUMERO_LOGRA" />
+          <ScalarProperty Name="COMPLEMENTO" ColumnName="COMPLEMENTO" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_FUNCIONARIO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_FUNCIONARIO">
+        <MappingFragment StoreEntitySet="TB_FUNCIONARIO">
+          <ScalarProperty Name="NUM_CARTEIRA_TRABALHO" ColumnName="NUM_CARTEIRA_TRABALHO" />
+          <ScalarProperty Name="VALE_ALIMENACAO_FUNC" ColumnName="VALE_ALIMENACAO_FUNC" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="COD_FUNC" ColumnName="COD_FUNC" />
+          <ScalarProperty Name="NOME_FUNC" ColumnName="NOME_FUNC" />
+          <ScalarProperty Name="ORGAO_EMISSOR_FUNC" ColumnName="ORGAO_EMISSOR_FUNC" />
+          <ScalarProperty Name="FUNCAO_FUNC" ColumnName="FUNCAO_FUNC" />
+          <ScalarProperty Name="NASC_FUNC" ColumnName="NASC_FUNC" />
+          <ScalarProperty Name="SALARIO_FUNC" ColumnName="SALARIO_FUNC" />
+          <ScalarProperty Name="VALE_TRANSPORTE_FUNC" ColumnName="VALE_TRANSPORTE_FUNC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_IMAGEM">
+      <EntityTypeMapping TypeName="OutturnModel.TB_IMAGEM">
+        <MappingFragment StoreEntitySet="TB_IMAGEM">
+          <ScalarProperty Name="COD_IMG" ColumnName="COD_IMG" />
+          <ScalarProperty Name="NOME_IMG" ColumnName="NOME_IMG" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_LIVRO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_LIVRO">
+        <MappingFragment StoreEntitySet="TB_LIVRO">
+          <ScalarProperty Name="IDIOMA_LIVRO" ColumnName="IDIOMA_LIVRO" />
+          <ScalarProperty Name="ASSUNTO_LIVRO" ColumnName="ASSUNTO_LIVRO" />
+          <ScalarProperty Name="EDITORA_LIVRO" ColumnName="EDITORA_LIVRO" />
+          <ScalarProperty Name="AUTOR_LIVRO" ColumnName="AUTOR_LIVRO" />
+          <ScalarProperty Name="COD_LIVRO" ColumnName="COD_LIVRO" />
+          <ScalarProperty Name="PRECO_LIVRO" ColumnName="PRECO_LIVRO" />
+          <ScalarProperty Name="NOME_LIVRO" ColumnName="NOME_LIVRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_LOGAR">
+      <EntityTypeMapping TypeName="OutturnModel.TB_LOGAR">
+        <MappingFragment StoreEntitySet="TB_LOGAR">
+          <ScalarProperty Name="COD_FUNC" ColumnName="COD_FUNC" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="SENHA" ColumnName="SENHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_MENCAO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_MENCAO">
+        <MappingFragment StoreEntitySet="TB_MENCAO">
+          <ScalarProperty Name="COD_FUNC" ColumnName="COD_FUNC" />
+          <ScalarProperty Name="COD_MENCAO" ColumnName="COD_MENCAO" />
+          <ScalarProperty Name="COD_ALUNO" ColumnName="COD_ALUNO" />
+          <ScalarProperty Name="COD_PROVA" ColumnName="COD_PROVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_MENSALIDADE">
+      <EntityTypeMapping TypeName="OutturnModel.TB_MENSALIDADE">
+        <MappingFragment StoreEntitySet="TB_MENSALIDADE">
+          <ScalarProperty Name="COD_MENSALIDADE" ColumnName="COD_MENSALIDADE" />
+          <ScalarProperty Name="COD_ALUNO" ColumnName="COD_ALUNO" />
+          <ScalarProperty Name="STATUS_MENSALIDADE" ColumnName="STATUS_MENSALIDADE" />
+          <ScalarProperty Name="DATA_MENSALIDADE" ColumnName="DATA_MENSALIDADE" />
+          <ScalarProperty Name="VALOR_MENSALIDADE" ColumnName="VALOR_MENSALIDADE" />
+          <ScalarProperty Name="DATA_CAIXA" ColumnName="DATA_CAIXA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PROVA">
+      <EntityTypeMapping TypeName="OutturnModel.TB_PROVA">
+        <MappingFragment StoreEntitySet="TB_PROVA">
+          <ScalarProperty Name="COD_PROVA" ColumnName="COD_PROVA" />
+          <ScalarProperty Name="NOTA_PROVA" ColumnName="NOTA_PROVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_RESPONSAVEL">
+      <EntityTypeMapping TypeName="OutturnModel.TB_RESPONSAVEL">
+        <MappingFragment StoreEntitySet="TB_RESPONSAVEL">
+          <ScalarProperty Name="COD_RESP" ColumnName="COD_RESP" />
+          <ScalarProperty Name="NOME_RESP" ColumnName="NOME_RESP" />
+          <ScalarProperty Name="CPF_RESP" ColumnName="CPF_RESP" />
+          <ScalarProperty Name="RG_RESP" ColumnName="RG_RESP" />
+          <ScalarProperty Name="TEL_RESP" ColumnName="TEL_RESP" />
+          <ScalarProperty Name="EMAIL_RESP" ColumnName="EMAIL_RESP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SALA">
+      <EntityTypeMapping TypeName="OutturnModel.TB_SALA">
+        <MappingFragment StoreEntitySet="TB_SALA">
+          <ScalarProperty Name="COD_SALA" ColumnName="COD_SALA" />
+          <ScalarProperty Name="CAPAC_SALA" ColumnName="CAPAC_SALA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SALA_DE_VIDEO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_SALA_DE_VIDEO">
+        <MappingFragment StoreEntitySet="TB_SALA_DE_VIDEO">
+          <ScalarProperty Name="COD_SALA_VIDEO" ColumnName="COD_SALA_VIDEO" />
+          <ScalarProperty Name="COD_FUNC" ColumnName="COD_FUNC" />
+          <ScalarProperty Name="COD_TURMA" ColumnName="COD_TURMA" />
+          <ScalarProperty Name="HORA_VIDEO" ColumnName="HORA_VIDEO" />
+          <ScalarProperty Name="DIA_VIDEO" ColumnName="DIA_VIDEO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TELEFONE">
+      <EntityTypeMapping TypeName="OutturnModel.TB_TELEFONE">
+        <MappingFragment StoreEntitySet="TB_TELEFONE">
+          <ScalarProperty Name="COD_TELEFONE" ColumnName="COD_TELEFONE" />
+          <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TURMA">
+      <EntityTypeMapping TypeName="OutturnModel.TB_TURMA">
+        <MappingFragment StoreEntitySet="TB_TURMA">
+          <ScalarProperty Name="DATA_FIN" ColumnName="DATA_FIN" />
+          <ScalarProperty Name="DATA_INI" ColumnName="DATA_INI" />
+          <ScalarProperty Name="COD_FUNC" ColumnName="COD_FUNC" />
+          <ScalarProperty Name="COD_TURMA" ColumnName="COD_TURMA" />
+          <ScalarProperty Name="COD_SALA" ColumnName="COD_SALA" />
+          <ScalarProperty Name="COD_CURSO" ColumnName="COD_CURSO" />
+          <ScalarProperty Name="NOME_TURMA" ColumnName="NOME_TURMA" />
+          <ScalarProperty Name="HORA_TURMA" ColumnName="HORA_TURMA" />
+          <ScalarProperty Name="DIA_TURMA" ColumnName="DIA_TURMA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="TB_ALUGUEL_LIVRO" TypeName="OutturnModel.TB_ALUGUEL_LIVRO" StoreEntitySet="TB_ALUGUEL_LIVRO">
+      <EndProperty Name="TB_ALUGUEL">
+        <ScalarProperty Name="COD_ALUGUEL" ColumnName="COD_ALUGUEL" />
+      </EndProperty>
+      <EndProperty Name="TB_LIVRO">
+        <ScalarProperty Name="COD_LIVRO" ColumnName="COD_LIVRO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TB_COMPRA_LIVRO" TypeName="OutturnModel.TB_COMPRA_LIVRO" StoreEntitySet="TB_COMPRA_LIVRO">
+      <EndProperty Name="TB_COMPRA">
+        <ScalarProperty Name="COD_COMPRA" ColumnName="COD_COMPRA" />
+      </EndProperty>
+      <EndProperty Name="TB_LIVRO">
+        <ScalarProperty Name="COD_LIVRO" ColumnName="COD_LIVRO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TB_RESPONSAVEL_ALUNO" TypeName="OutturnModel.TB_RESPONSAVEL_ALUNO" StoreEntitySet="TB_RESPONSAVEL_ALUNO">
+      <EndProperty Name="TB_ALUNO">
+        <ScalarProperty Name="COD_ALUNO" ColumnName="COD_ALUNO" />
+      </EndProperty>
+      <EndProperty Name="TB_RESPONSAVEL">
+        <ScalarProperty Name="COD_RESP" ColumnName="COD_RESP" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="TB_SALARIO">
+      <EntityTypeMapping TypeName="OutturnModel.TB_SALARIO">
+        <MappingFragment StoreEntitySet="TB_SALARIO">
+          <ScalarProperty Name="NUM_PIS" ColumnName="NUM_PIS" />
+          <ScalarProperty Name="SALARIO" ColumnName="SALARIO" />
+          <ScalarProperty Name="TIPO_SALRIO" ColumnName="TIPO_SALRIO" />
+          <ScalarProperty Name="COD_SALARIO" ColumnName="COD_SALARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

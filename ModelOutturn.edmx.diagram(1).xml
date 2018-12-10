@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1e33c3f6d3a041c086250c146c899694" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ALUGUEL" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ALUGUEL_LIVRO" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ALUNO" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_DOCUMENTO" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_DOCUMENTO_ALUNO" Width="1.5" PointX="11" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_DOCUMENTO_FUNCIONARIO" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ENDERECO" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ENDERECO_ALUNO" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_ENDERECO_FUNC" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_FUNCIONARIO" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_LIVRO" Width="1.5" PointX="6" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_LOGAR" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_MENCAO" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_MENCAO_ALUNO" Width="1.5" PointX="8.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_PROVA" Width="1.5" PointX="3.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_SALARIO" Width="1.5" PointX="3.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_SALARIO_FUNCIONARIO" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_TELEFONE" Width="1.5" PointX="3.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_TELEFONE_ALUNO" Width="1.5" PointX="9" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_TELEFONE_FUNC" Width="1.5" PointX="6" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_TCM_OutturnModel.TB_TURMA" Width="1.5" PointX="3" PointY="27.25" IsExpanded="true" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ALUGUE__COD_A__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ALUGUE__COD_A__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ALUGUE__COD_L__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_DOCUME__COD_A__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ENDERE__COD_A__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_A__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_A__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TELEFO__COD_A__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_DOCUME__COD_D__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_DOCUME__COD_D__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_DOCUME__COD_F__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ENDERE__COD_E__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ENDERE__COD_E__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_ENDERE__COD_F__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_LOGAR__SENHA__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_F__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_SALARI__COD_F__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TELEFO__COD_F__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TURMA__COD_FU__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_M__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_MENCAO__COD_P__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_SALARI__COD_S__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TELEFO__COD_T__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_TCM_OutturnModel.FK__TB_TELEFO__COD_T__3A81B327" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
