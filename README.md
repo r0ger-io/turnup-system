@@ -1,5 +1,5 @@
-#TurnUP Sys
-##Sistema de gerenciamento para escolas.
+# TurnUP Sys
+## Sistema de gerenciamento para escolas.
 Desevolvido com objetio de facilitar a gestão de turmas e suas respectivas atividades, tais como:
 
 - Aluguel de Livros
